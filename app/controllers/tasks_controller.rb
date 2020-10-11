@@ -63,19 +63,18 @@ class TasksController < ApplicationController
 
   # POST /tasks/1/toggle
   def toggle
-    if @task != nil?
-      @task.update(:complete => params.has_key?(:complete))
-    end
+    @task&.update(complete: params.key?(:complete))
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_task
-      @task = Task.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def task_params
-      params.require(:task).permit(:title, :body, :complete)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_task
+    @task = Task.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def task_params
+    params.require(:task).permit(:title, :body, :complete)
+  end
 end
