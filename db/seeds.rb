@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Task.destroy_all
-Task.create!(title: 'first', body: 'First task', complete: false)
-Task.create!(title: 'second', body: 'Second task', complete: true)
-Task.create!(title: 'third', body: 'Third task', complete: false)
+Task.create!(title: 'написать программу', body: 'Написать простейший to-do list', complete: true)
+Task.create!(title: 'заполнить форму', body: 'Заполнить форму по адресу https://forms.gle/bHBVM59uWJGDhxsKA', complete: false)
+Task.create!(title: 'стать хорошим программистом', body: 'Джун - Миддл - Сеньор', complete: false)

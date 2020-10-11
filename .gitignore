@@ -31,3 +31,5 @@
 # vim stuff
 *~
 *.swp
+
+/.env
